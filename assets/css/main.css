@@ -1,0 +1,146 @@
+/* ==========
+   BioFast - estilos de la landing principal
+   Ruta recomendada: assets/css/main.css
+   ========== */
+
+/* Variables de color reutilizables */
+:root {
+  --color-bg: #020617;
+  --color-bg-card: #0b1020;
+  --color-accent: #00e5ff;
+  --color-accent-soft: #22c55e;
+  --color-text: #ffffff;
+  --color-border: #111827;
+}
+
+/* Estilos base del body */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #1f2937, var(--color-bg));
+  color: var(--color-text);
+}
+
+/* Sección tipo “hero” centrada */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Título principal */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Parte resaltada del título */
+h1 span {
+  color: var(--color-accent);
+}
+
+/* Subtítulo / descripción corta */
+.subtitle {
+  max-width: 480px;
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor de los botones iniciales */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+/* Estilo base de botón */
+.btn {
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+}
+
+/* Botón principal (CTA) */
+.btn-primary {
+  background: var(--color-accent);
+  color: #020617;
+  box-shadow: 0 12px 30px rgba(0, 229, 255, 0.3);
+}
+
+/* Botón secundario */
+.btn-secondary {
+  background: transparent;
+  border: 1px solid #4b5563;
+  color: var(--color-text);
+}
+
+/* Hover para ambos botones */
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Contenedor de tarjetas de planes */
+.plans {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* Tarjeta individual de plan */
+.card {
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Título en tarjeta */
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+}
+
+/* Precio del plan */
+.price {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-accent-soft);
+}
+
+/* Listas dentro de las tarjetas */
+ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 0;
+}
+
+/* Pie de página */
+footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* Diseño responsive para pantallas medianas/grandes */
+@media (min-width: 768px) {
+  .plans {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
