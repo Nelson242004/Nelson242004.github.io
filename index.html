@@ -2,186 +2,40 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <!-- Título de la pestaña del navegador -->
   <title>BioFast - Tu link en la bio en 1 minuto</title>
 
-  <!-- Hace que se vea bien en celular -->
+  <!-- Hace que se vea bien en celulares -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Descripción para SEO / compartir en redes -->
-  <meta name="description" content="Crea tu link en la bio profesional en minutos. Ideal para emprendimientos, negocios e influencers. Modelo Free y Pro.">
+  <!-- Descripción para SEO -->
+  <meta name="description" content="Crea tu link en la bio profesional en minutos. Ideal para emprendimientos, negocios e influencers.">
 
-  <style>
-    /* ====== ESTILOS GENERALES ====== */
-    :root {
-      /* Colores base de la marca BioFast (podés cambiarlos) */
-      --color-bg: #020617;
-      --color-bg-card: #0b1020;
-      --color-accent: #00e5ff;
-      --color-accent-soft: #22c55e;
-      --color-text: #ffffff;
-      --color-border: #111827;
-    }
-
-    /* Quitamos margenes del body y definimos fuente */
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1f2937, var(--color-bg));
-      color: var(--color-text);
-    }
-
-    /* Contenedor principal tipo "hero" centrado */
-    .hero {
-      min-height: 100vh; /* al menos altura de pantalla */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 2rem 1.5rem;
-      box-sizing: border-box;
-    }
-
-    /* Título principal */
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Resaltamos una parte del título con color de marca */
-    h1 span {
-      color: var(--color-accent);
-    }
-
-    /* Subtítulo / descripción corta */
-    .subtitle {
-      max-width: 480px;
-      opacity: 0.85;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Contenedor de botones principales */
-    .buttons {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-bottom: 2.5rem;
-    }
-
-    /* Estilo base de botón */
-    .btn {
-      padding: 0.8rem 1.6rem;
-      border-radius: 999px; /* hace el botón redondo */
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-block;
-      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
-    }
-
-    /* Botón principal (llamado a la acción) */
-    .btn-primary {
-      background: var(--color-accent);
-      color: #020617;
-      box-shadow: 0 12px 30px rgba(0, 229, 255, 0.3);
-    }
-
-    /* Botón secundario transparente */
-    .btn-secondary {
-      background: transparent;
-      border: 1px solid #4b5563;
-      color: var(--color-text);
-    }
-
-    /* Efecto hover (pasar el mouse) en botones */
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
-    }
-
-    /* Contenedor de planes (tarjetas Free/Pro/Business) */
-    .plans {
-      margin-top: 1rem;
-      display: grid;
-      gap: 1rem;
-      max-width: 900px;
-      width: 100%;
-    }
-
-    /* Tarjeta de plan individual */
-    .card {
-      border-radius: 1rem;
-      padding: 1.5rem;
-      background: var(--color-bg-card);
-      border: 1px solid var(--color-border);
-      text-align: left;
-      box-sizing: border-box;
-    }
-
-    .card h2 {
-      margin-top: 0;
-      margin-bottom: 0.25rem;
-    }
-
-    /* Precio del plan */
-    .price {
-      font-size: 1.2rem;
-      margin-bottom: 0.75rem;
-      color: var(--color-accent-soft);
-    }
-
-    ul {
-      padding-left: 1.2rem;
-      margin: 0.5rem 0 0;
-    }
-
-    /* Footer al final de la página */
-    footer {
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.8rem;
-      opacity: 0.6;
-    }
-
-    /* Diseño responsive: en pantallas grandes, 3 columnas de planes */
-    @media (min-width: 768px) {
-      .plans {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-    }
-  </style>
+  <!-- AQUÍ enlazamos el CSS externo -->
+  <!-- Ojo con la ruta: empieza en la raíz del repo -->
+  <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
-  <!-- ====== SECCIÓN PRINCIPAL (HERO) ====== -->
+  <!-- Sección principal de la landing -->
   <section class="hero">
-    <!-- Título de la marca -->
     <h1>BioFast <span>.link</span></h1>
 
-    <!-- Subtítulo explicando el servicio -->
     <p class="subtitle">
       Crea tu “link en la bio” profesional en menos de 1 minuto. Ideal para emprendedores,
       negocios locales e influencers que venden por WhatsApp, Instagram o TikTok.
     </p>
 
-    <!-- BOTONES PRINCIPALES -->
     <div class="buttons">
-      <!-- Este botón debería apuntar a tu Google Forms para que el cliente cargue sus datos -->
+      <!-- Cambia este enlace por tu Google Forms real -->
       <a class="btn btn-primary" href="https://forms.gle/tu-formulario-aqui" target="_blank" rel="noopener">
         Crear mi Bio gratis
       </a>
 
-      <!-- Botón que hace scroll a la sección de planes -->
       <a class="btn btn-secondary" href="#planes">
         Ver planes
       </a>
     </div>
 
-    <!-- ====== SECCIÓN DE PLANES ====== -->
     <div id="planes" class="plans">
-      <!-- PLAN FREE -->
       <article class="card">
         <h2>Free</h2>
         <p class="price">Gs 0 / mes</p>
@@ -193,7 +47,6 @@
         </ul>
       </article>
 
-      <!-- PLAN PRO (RECOMENDADO) -->
       <article class="card">
         <h2>Pro</h2>
         <p class="price">Gs 20.000 / mes</p>
@@ -205,7 +58,6 @@
         </ul>
       </article>
 
-      <!-- PLAN BUSINESS -->
       <article class="card">
         <h2>Business</h2>
         <p class="price">Desde Gs 50.000 / mes</p>
@@ -219,14 +71,11 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     © <span id="year"></span> BioFast. Creado por Nelson242004.
   </footer>
 
-  <script>
-    // Script simple para mostrar siempre el año actual en el footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <!-- JS externo al final del body -->
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
