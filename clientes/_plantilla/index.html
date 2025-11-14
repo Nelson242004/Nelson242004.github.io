@@ -1,1 +1,123 @@
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+
+  <!--
+    TÍTULO DE LA PÁGINA
+    Cambiar {{NOMBRE_NEGOCIO}} por el nombre real cuando copies la carpeta.
+  -->
+  <title>{{NOMBRE_NEGOCIO}} | BioFast</title>
+
+  <!-- Hace que se vea bien en celulares -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Descripción corta para SEO / compartir en redes -->
+  <meta name="description" content="{{DESCRIPCION_CORTA_DEL_NEGOCIO}}">
+
+  <!-- Enlazamos el CSS de ESTE cliente (mismo folder) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!--
+    CONTENEDOR PRINCIPAL
+    Todo el contenido del perfil está dentro de .container
+  -->
+  <div class="container">
+
+    <!-- AVATAR / LOGO DEL NEGOCIO -->
+    <div class="avatar">
+      <!-- Cambiar la URL por un logo/foto real cuando copies la carpeta -->
+      <img
+        src="https://via.placeholder.com/400x400.png?text=Logo"
+        alt="{{NOMBRE_NEGOCIO}}"
+      />
+    </div>
+
+    <!-- NOMBRE DEL NEGOCIO -->
+    <h1>{{NOMBRE_NEGOCIO}}</h1>
+
+    <!-- FRASE CORTA / DESCRIPCIÓN -->
+    <p class="tagline">
+      {{DESCRIPCION_CORTA_DEL_NEGOCIO}}
+    </p>
+
+    <!-- ETIQUETA DE ESTADO (ABIERTO, SOLO DELIVERY, ETC.) -->
+    <div class="pill">
+      {{TEXTO_ESTADO}} <!-- Ej: "Abierto hoy · Delivery y retiro en el local" -->
+    </div>
+
+    <!--
+      LISTA DE BOTONES
+      Podés agregar, quitar o reordenar según el cliente.
+    -->
+    <div class="links">
+
+      <!-- BOTÓN WHATSAPP -->
+      <!-- Cambiar NUMERO_WHATSAPP por uno real (con código país, sin + ni espacios) -->
+      <a
+        class="link-btn"
+        href="https://wa.me/{{NUMERO_WHATSAPP}}?text={{MENSAJE_URL_ENCODED}}"
+        target="_blank"
+        rel="noopener"
+      >
+        💬 Hacer pedido por WhatsApp
+      </a>
+
+      <!-- INSTAGRAM -->
+      <a
+        class="link-btn"
+        href="{{URL_INSTAGRAM}}"
+        target="_blank"
+        rel="noopener"
+      >
+        📸 Ver más en Instagram
+      </a>
+
+      <!-- TIKTOK (opcional, borrar si no usa) -->
+      <a
+        class="link-btn"
+        href="{{URL_TIKTOK}}"
+        target="_blank"
+        rel="noopener"
+      >
+        🎵 Ver contenido en TikTok
+      </a>
+
+      <!-- WEB / PEDIDOS / CATÁLOGO -->
+      <a
+        class="link-btn"
+        href="{{URL_WEB_O_CATALOGO}}"
+        target="_blank"
+        rel="noopener"
+      >
+        🛒 Ver menú / catálogo completo
+      </a>
+
+      <!-- PROMOS DEL DÍA (IMAGEN, PDF, HISTORIA DESTACADA, ETC.) -->
+      <a
+        class="link-btn"
+        href="{{URL_PROMOS}}"
+        target="_blank"
+        rel="noopener"
+      >
+        🔥 Promos del día
+      </a>
+    </div>
+
+    <!-- MARCA DE AGUA BIOFAST -->
+    <div class="badge">
+      Link creado con
+      <a href="https://Nelson242004.github.io" target="_blank" rel="noopener">
+        BioFast
+      </a>
+      <br />
+      ¿Quieres uno para tu negocio? Escríbenos por WhatsApp.
+    </div>
+  </div>
+
+  <!-- JavaScript específico de este cliente -->
+  <script src="script.js"></script>
+</body>
+</html>
